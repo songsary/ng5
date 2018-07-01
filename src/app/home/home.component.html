@@ -1,0 +1,20 @@
+<div class="container color-dark">
+  <div class="col">
+    <p>Add your list</p>
+  </div>
+  <div class="col">
+    <p>Your bucket list ({{itemCount}})</p>
+  </div>
+</div>
+
+<div class="container color-light">
+  <div class="col">
+    <form>
+      <input type="text" name="item" class="txt" placeholder="Add new list"  [(ngModel)]="listText">
+      <input type="submit" value="{{btnText}}" class="btn" (click)="addItem()">
+    </form>
+  </div>
+  <div class="col">
+    <p class="life-container" *ngFor="let data of listAll">{{data}}</p>
+  </div>
+</div>
